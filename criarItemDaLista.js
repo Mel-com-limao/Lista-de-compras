@@ -61,6 +61,23 @@ export function criarItemDaLista() {
     const iconeExcluir = document.createElement("i");
     iconeExcluir.className = "bi bi-trash";
 
+     // Botão para editar item da lista
+    const botaoEditar = document.createElement("button");
+    botaoEditar.classList.add("botao-editar");
+    const iconeEditar = document.createElement("i");
+    iconeEditar.className = "bi bi-pen";
+    botaoEditar.style.cursor = "pointer";
+    botaoEditar.appendChild(iconeEditar);
+    containerItemDaLista.appendChild(botaoEditar);
+
+    // Evento para edição do item
+    botaoEditar.addEventListener("click" , function (){
+        const novoTexto = prompt("Edite o item: ", nomeItem.innerText);
+        if (novoTexto && novoTexto.trim() !== "") {
+            nomeItem.innerText = novoTexto.trim();
+        }
+    });
+
     // Adiciona uma "mãozinha" com a sobreposição do mouse
     botao.style.cursor = "pointer";
 
@@ -97,22 +114,5 @@ export function criarItemDaLista() {
 
     // Retorna o <li> completo, que já contém o item digitado, pronto para ser adicionado na lista.
     return itemDaLista;
-
-    // Botão para editar item da lista
-    const botaoEditar = document.createElement("button");
-    botaoEditar.classList.add("botao-editar");
-    const iconeEditar = document.createElement("i");
-    iconeEditar.className = "bi bi-pen";
-    botaoEditar.style.cursor = "pointer";
-    botaoEditar.appendChild(iconeEditar);
-    containerItemDaLista.appendChild(botaoEditar);
-
-    // Evento para edição do item
-    botaoEditar.addEventListener("click" , function (){
-        const novoTexto = prompt("Edite o item: ", nomeItem.innerText);
-        if (novoTexto && novoTexto.trim() !== "") {
-            nomeItem.innerText = novoTexto.trim();
-        }
-    });
 
 }
