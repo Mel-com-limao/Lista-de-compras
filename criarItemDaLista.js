@@ -59,24 +59,24 @@ export function criarItemDaLista() {
 
     // Cria um elemento "icone"
     const iconeExcluir = document.createElement("i");
-    iconeExcluir.className = "bi bi-trash";
+    iconeExcluir.className = "bi bi-trash-fill";
 
-     // Botão para editar item da lista
-    const botaoEditar = document.createElement("button");
-    botaoEditar.classList.add("botao-editar");
-    const iconeEditar = document.createElement("i");
-    iconeEditar.className = "bi bi-pen";
-    botaoEditar.style.cursor = "pointer";
-    botaoEditar.appendChild(iconeEditar);
-    containerItemDaLista.appendChild(botaoEditar);
-
-    // Evento para edição do item
-    botaoEditar.addEventListener("click" , function (){
-        const novoTexto = prompt("Edite o item: ", nomeItem.innerText);
-        if (novoTexto && novoTexto.trim() !== "") {
-            nomeItem.innerText = novoTexto.trim();
-        }
-    });
+        // Botão para editar item da lista
+        const botaoEditar = document.createElement("button");
+        botaoEditar.classList.add("botao-editar");
+        const iconeEditar = document.createElement("i");
+        iconeEditar.className = "bi bi-pen";
+        botaoEditar.style.cursor = "pointer";
+        botaoEditar.appendChild(iconeEditar);
+        containerItemDaLista.appendChild(botaoEditar);
+    
+        // Evento para edição do item
+        botaoEditar.addEventListener("click" , function (){
+            const novoTexto = prompt("Edite o item: ", nomeItem.innerText);
+            if (novoTexto && novoTexto.trim() !== "") {
+                nomeItem.innerText = novoTexto.trim();
+            }
+        });
 
     // Adiciona uma "mãozinha" com a sobreposição do mouse
     botao.style.cursor = "pointer";
@@ -88,11 +88,11 @@ export function criarItemDaLista() {
     botao.appendChild(iconeExcluir);
 
     botao.addEventListener("click", function (){
-        const confirmacao = confirm("Deseja realmente deletar esse item?");
+        const confirmacao = confirm("Deseja excluir esse item?");
 
         if (confirmacao){
             itemDaLista.remove();
-            alert("Item deletado");
+            alert("Item excluído");
             verificarListaVazia(listaDeCompras);
         }
     });
