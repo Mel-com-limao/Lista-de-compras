@@ -12,7 +12,7 @@
     --preto: #131730;
     --fonte-titulo: "Andale Mono", sans-serif;
     --fonte-texto: 'Andale Mono', sans-serif;
-    --degrade-azul: linear-gradient(180deg, #189661 0%, #37913b 100%);
+    --degrade-azul: linear-gradient(180deg, #55bb90 0%, #78da7b 100%);
 }
 
 
@@ -200,7 +200,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F9F9F9;
+    background-color: #000000;
     border: 1px solid var(--preto);
     border-radius: 8px;
     padding: 10px 16px;
@@ -212,7 +212,7 @@ li {
     display: flex;
     align-items: center;
     width: 100%;
-    background: #a0ffe7;
+    background: #c0ffd0;
     border: 1px solid var(--preto);
     border-radius: 8px;
     padding: 10px 16px;
