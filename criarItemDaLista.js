@@ -17,7 +17,7 @@ export function criarItemDaLista() {
     // Se estiver vazio, mostra um alerta na tela pedindo para inserir um item
     // e finaliza a função com 'return', impedindo a continuação do código.
     if (inputItem.value === "") {
-        alert("Por favor, insira um item!");
+        alert("Por favor, insira um item!☺");
         return;
     }
 
