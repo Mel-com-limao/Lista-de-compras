@@ -6,18 +6,18 @@
 
 
 :root {
-    --cor-primaria: #005757;
-    --cor-secundaria: #862525;
+    --cor-primaria: 9c191b;
+    --cor-secundaria: bf0603;
     --neutro: #F9F9F9;
     --preto: #131730;
     --fonte-titulo: "Andale Mono", sans-serif;
     --fonte-texto: 'Andale Mono', sans-serif;
-    --degrade-azul: linear-gradient(180deg, #55bb90 0%, #78da7b 100%);
+    --degrade-vermelho: linear-gradient(180deg, ec8385 0%, f1a7a9 100%);
 }
 
 
 body {
-    background: var(--degrade-azul);
+    background: var(--degrade-vermelho);
     background-repeat: no-repeat;
     height: 100vh;
 
@@ -212,7 +212,7 @@ li {
     display: flex;
     align-items: center;
     width: 100%;
-    background: #c0ffd0;
+    background: dd2c2f;
     border: 1px solid var(--preto);
     border-radius: 8px;
     padding: 10px 16px;
